@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :adomins,skip: [:registrations, :passwords], contorollers:{
    sessions: "adomin/sessions"
   }
-
+#会員用
   devise_for :members,skip: [:passwords], contorollers:{
     registrstions: "publick/ registrstions",
     sessions: 'publick/sessions'
