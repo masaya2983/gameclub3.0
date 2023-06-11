@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'homes/top'
    #管理者用
   devise_for :adomins,skip: [:registrations, :passwords], contorollers:{
    sessions: "adomin/sessions"
