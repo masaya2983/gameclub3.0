@@ -15,6 +15,10 @@ Rails.application.routes.draw do
    resources :games, only: [:index,:show,:edit,:update]
    resources :category, only: [:index,:show,:edit,:update]
  end
+ #ゲスト用
+ devise_scope :member do
+    post 'users/guest_sign_in', to: 'users/sessions#guest_sign_in'
+  end
  scope module: :public do
    root :to =>"homes#top"
    get "about" => "homes#top"

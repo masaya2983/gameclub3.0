@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 class Public::SessionsController < Devise::SessionsController
+ def guedt_sugn_in
+   member = Member.guest
+   sign_in member
+   redirect_to member_path(member), notice: 'guestuserでログインしました。'
+  end
+
   # before_action :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in
