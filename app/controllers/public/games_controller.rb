@@ -1,7 +1,8 @@
 class Public::GamesController < ApplicationController
   
   def show
-  
+   @gane = Game.find(params[:id])
+   
   end
   
   def index
