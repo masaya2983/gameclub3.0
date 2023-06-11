@@ -15,13 +15,17 @@ class Public::MembersController < ApplicationController
   end
   
  def update
- 
+ if @member.update(member_params)
+   
+ else
+   
+ end
  end
  
  private
   
 def member_params
-  
+  params.require(:member).permit(:name, :introduction, :profile_image)
 end
 
 
